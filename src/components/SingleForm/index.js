@@ -14,7 +14,7 @@ const SingleForm = (props) => {
     event.preventDefault();
     setShowError(true);
     if (validForm()) {
-      props.whenStudentIsRegister({
+      props.whenRegisterStudent({
         name: name.value,
         email: email.value,
       });
@@ -45,7 +45,7 @@ const SingleForm = (props) => {
         />
         <TextField
           required={true}
-          label='email'
+          label='Email'
           placeholder='Type the email'
           value={email.value}
           whenChanges={(value, error) => setEmail({ value: value, error: error })}
