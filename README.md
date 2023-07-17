@@ -8,4 +8,4 @@
 
 - `npm install`
 - `npm start`
-- The UI will be available at http://localhost:3000
+- The UI will be available at http://localhost:3002
