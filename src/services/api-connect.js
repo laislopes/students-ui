@@ -1,6 +1,6 @@
 import generateS3PresignedUrl from "./S3Urlgenerator.js";
 
-const BASE_URL = "<Insert API URL here>";
+const BASE_URL = process.env.API_BASE_URL;
 
 function buildFetchObj(method, contentType, body) {
   return ({
