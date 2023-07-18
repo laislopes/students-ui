@@ -12,10 +12,10 @@ async function generateS3PresignedUrl(fileKey) {
     }
   }
 
-  const s3Payload = credentials ? { credentials, region: "sa-east-1"} : null;
+  const s3Payload = credentials ? { credentials, region: "us-east-1"} : null;
   const s3Client = new S3Client(s3Payload)
   const command = new PutObjectCommand({
-    Bucket: "students-csv",
+    Bucket: "students-csv-batch",
     Key: fileKey
   });
 

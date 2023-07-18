@@ -1,6 +1,6 @@
 import generateS3PresignedUrl from "./S3Urlgenerator.js";
 
-const BASE_URL = process.env.API_BASE_URL;
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 function buildFetchObj(method, contentType, body) {
   return ({
@@ -18,6 +18,7 @@ function buildFetchObj(method, contentType, body) {
 async function createRegister(newRegister) {
   const fetchObj = buildFetchObj("POST", "application/json", JSON.stringify(newRegister))
   try {
+    console.log(`${BASE_URL}/students`)
     const res = await fetch(`${BASE_URL}/students`, fetchObj);
     return res.json();
   } catch (error) {
